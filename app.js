@@ -7,12 +7,12 @@ app.listen(3333,() => {
     console.log('Server is listening on port 3333');
 });
 // api test
-app.get('/test',   (request,response) => {
+app.get('/test', (request,response) => {
     response.status(200).json("hello");
 });
 const mongoose = require ('mongoose');
 //trying connect to mongodb
-mongoose.connect('mongodb+srv://<username>:123456Abcd@cluster0.s5vt4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://admin123:123456Abcd@cluster0.s5vt4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
    { useNewUrlParser: true }, (err) => {
        if (err) {
            console.log('Can not connect to mongodb, because ' + err);
