@@ -20,6 +20,12 @@ mongoose.connect('mongodb+srv://<username>:123456Abcd@cluster0.s5vt4.mongodb.net
            console.log('Connect to mongodb successful');
        }
    });
+//define task schema
+const taskSchema = mongoose.Schema({
+    content: {type: String},
+    status: {type: Boolean}
+});
+const Task = mongoose.model('Task', taskSchema);
 app.use(bodyParser.json());
 //api add new task
 app.post('/task', (request,response) => {
